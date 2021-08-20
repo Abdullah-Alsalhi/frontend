@@ -35,8 +35,8 @@ jobs:
         id: docker_build_web
         uses: docker/build-push-action@v2
         with:
-          context: ./
-          file: ./frontend
+          context: .
+          file: .
           builder: ${{ steps.buildx.outputs.name }}
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/nodejs-fontend:latest
